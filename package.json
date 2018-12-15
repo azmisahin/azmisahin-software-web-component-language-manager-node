@@ -1,0 +1,21 @@
+{
+  "name": "language-manager",
+  "version": "0.0.1",
+  "description": "The most flexible version of multi-language management. Manages language resources. Makes it easy to switch between different language sources.",
+  "author": "azmisahin@outlook.com",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node.git"
+  },
+  "keywords": [
+    "flexible",
+    "multi-language",
+    "managament",
+    "resource"
+  ],
+  "bugs": {
+    "url": "https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node/issues"
+  },
+  "homepage": "https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node#readme"
+}

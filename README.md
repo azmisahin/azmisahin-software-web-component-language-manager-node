@@ -1,2 +1,2 @@
-# azmisahin-software-web-component-language-manager-node
-Language Managar For NodeJS
+# language-manager
+The most flexible version of multi-language management. Manages language resources. Makes it easy to switch between different language sources.
