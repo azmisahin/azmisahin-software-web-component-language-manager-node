@@ -1,6 +1,6 @@
 {
   "name": "language-manager",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "The most flexible version of multi-language management. Manages language resources. Makes it easy to switch between different language sources.",
   "author": "azmisahin@outlook.com",
   "license": "MIT",
@@ -18,17 +18,12 @@
     "url": "https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node/issues"
   },
   "homepage": "https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node#readme",
-  "devDependencies": {
-    "eslint": "^5.10.0",
-    "eslint-config-standard": "^12.0.0",
-    "eslint-plugin-import": "^2.14.0",
-    "eslint-plugin-node": "^8.0.0",
-    "eslint-plugin-promise": "^4.0.1",
-    "eslint-plugin-standard": "^4.0.0"
+  "main": "src/index.js",
+  "scripts": {
+    "lint":"eslint src | eslint tests",
+    "test": "node tests"
   },
-  "lint-staged": {
-    "*.js": [
-      "git add"
-    ]
+  "devDependencies": {
+    "eslint": "^5.10.0"
   }
 }
