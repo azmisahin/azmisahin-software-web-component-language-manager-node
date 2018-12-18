@@ -18,10 +18,11 @@ module.exports = {
       2
     ],
     // ref: https://eslint.org/docs/rules/linebreak-style
-    "linebreak-style": [
-      "error",
-      "windows"
-    ],
+    // "linebreak-style": [ "error", "windows" ],
+    // Cross Platform Rule
+    "linebreak-style": ["error", (process.platform === "win32" ? "windows" : "unix")],
+    // Disabled Line Break Style
+    // "linebreak-style": 0,
     // ref: https://eslint.org/docs/rules/quotes
     "quotes": [
       "error",

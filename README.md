@@ -17,3 +17,8 @@ var LanguageManager = require('language-manager')
 // Instance create
 var l = new LanguageManager()
 ```
+
+# Pipelines
+[![Build Status](https://dev.azure.com/azmisahin-github/azmisahin-software-web-component-language-manager-node/_apis/build/status/azmisahin.azmisahin-software-web-component-language-manager-node?branchName=master)](https://dev.azure.com/azmisahin-github/azmisahin-software-web-component-language-manager-node/_build/latest?definitionId=8?branchName=master)
+
+[![NPM](https://nodei.co/npm/language-manager.png)](https://nodei.co/npm/language-manager/)
