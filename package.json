@@ -1,6 +1,6 @@
 {
   "name": "language-manager",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The most flexible version of multi-language management. Manages language resources. Makes it easy to switch between different language sources.",
   "author": "azmisahin@outlook.com",
   "license": "MIT",
@@ -26,15 +26,16 @@
   "husky": {
     "hooks": {
       "pre-commit": "lint-staged",
-      "commitmsg":"commit stage",
+      "commitmsg": "commit stage",
       "pre-push": "npm run test && npm version patch"
     }
-  },  
+  },
   "lint-staged": {
     "*.js": [
       "npm run lint",
       "npm run test",
-      "git add"]
+      "git add"
+    ]
   },
   "devDependencies": {
     "eslint": "^5.10.0",
