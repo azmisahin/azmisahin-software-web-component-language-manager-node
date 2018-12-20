@@ -28,7 +28,7 @@ var TestTool = function () {
 * @param {any} expected Expected any
 * */
 TestTool.prototype.Test = function (description, expected, actual) {
-  var testResult = actual == expected ? { status: '\x1b[32m%s\x1b[0m', message: 'Success ' } : { status: '\x1b[31m%s\x1b[0m', message: 'Error ' }
+  var testResult = actual == expected ? { status: '\x1b[32m%s\x1b[0m', message: 'Success ' } : { status: '\x1b[31m%s\x1b[0m', message: 'Error' }
   log.WriteLine('\x1b[33m%s\x1b[0m', description)
   log.WriteLine(testResult.status, testResult.message)
   if (testResult.message === 'Error') {
