@@ -1,4 +1,4 @@
- /**
+/**
  * Language Manager
  *
  * @param { string } langCode Resource Lang Code
@@ -9,15 +9,16 @@
  * @returns <LanguageManager>
  *
  * @author Azmi ŞAHİN
- * @version 1.0.0
  * @since 2018
- */
- class LanguageManager{
+ **/
+class LanguageManager {
 
   /**
    * Language Manager Initalize
    *
    * @example
+   *
+   * new LanguageManager()
    * new LanguageManager('tr')
    * new LanguageManager('en')
    *
@@ -25,7 +26,7 @@
    *
    * @returns <LanguageManager>
    */
-  constructor(langCode){
+  constructor(langCode) {
     this.Name = 'language-manager'
     this.LangCode = langCode ? langCode : 'tr'
     return this

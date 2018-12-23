@@ -8,7 +8,7 @@ module.exports = {
   "extends": "eslint:recommended",
   // ref: https://eslint.org/docs/user-guide/configuring#specifying-parser-options
   "parserOptions": {
-    "ecmaVersion": 5
+    "ecmaVersion": 6
   },
   // ref: https://eslint.org/docs/rules
   "rules": {

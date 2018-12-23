@@ -18,6 +18,12 @@ var LanguageManager = require('language-manager')
 var l = new LanguageManager()
 ```
 
+# Test
+
+```shell
+$ npm run test
+```
+
 # Pipelines
 [![Build Status](https://dev.azure.com/azmisahin-github/azmisahin-software-web-component-language-manager-node/_apis/build/status/azmisahin.azmisahin-software-web-component-language-manager-node?branchName=master)](https://dev.azure.com/azmisahin-github/azmisahin-software-web-component-language-manager-node/_build/latest?definitionId=8?branchName=master)
 

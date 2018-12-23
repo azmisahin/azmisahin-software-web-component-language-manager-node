@@ -1,8 +1,8 @@
 // Test Tool
-var tt = require('./tool')
+var TestManager = require('@azmisahin/test-manager')
+var tt = new TestManager(true)
 
 /**
- * Standart Node Test
  * Instance Test
  */
 var DefaultTest = function (){
@@ -13,7 +13,6 @@ var DefaultTest = function (){
 DefaultTest()
 
 /**
- * Standart Node Test
  * Result Test
  */
 var ResultTest = function (){
@@ -25,7 +24,6 @@ var ResultTest = function (){
 ResultTest()
 
 /**
- * Standart Node Test
  * Parameter test
  */
 var ParameterTest = function (){
