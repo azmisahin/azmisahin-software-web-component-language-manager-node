@@ -1,6 +1,6 @@
 {
   "name": "language-manager",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "The most flexible version of multi-language management. Manages language resources. Makes it easy to switch between different language sources.",
   "author": "azmisahin@outlook.com",
   "license": "MIT",
@@ -38,7 +38,7 @@
     ]
   },
   "devDependencies": {
-    "eslint":"*",
+    "eslint": "*",
     "husky": "*",
     "lint-staged": "*",
     "@azmisahin/test-manager": "*"
