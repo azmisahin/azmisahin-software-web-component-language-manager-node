@@ -34,6 +34,7 @@ TestTool.prototype.Test = function (description, expected, actual) {
   if (testResult.message === 'Error') {
     log.WriteLine('\x1b[36m%s\x1b[0m', 'Expected :' + expected)
     log.WriteLine('\x1b[34m%s\x1b[0m', 'Actual   :' + actual)
+    throw '\x1b[31m'+ testResult.message + ': ' + description + '\x1b[0m'
   }
   log.Write('--------------------------------------------------')
   return testResult
