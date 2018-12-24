@@ -41,6 +41,6 @@
     "eslint": "*",
     "husky": "*",
     "lint-staged": "*",
-    "@azmisahin/test-manager": "*"
+    "test-management": "*"
   }
 }

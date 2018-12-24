@@ -1,5 +1,5 @@
 // Test Tool
-var TestManager = require('@azmisahin/test-manager')
+var TestManager = require('test-management')
 var tt = new TestManager(true)
 
 /**
