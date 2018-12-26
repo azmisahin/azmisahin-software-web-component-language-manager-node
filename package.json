@@ -4,23 +4,28 @@
   "description": "The most flexible version of multi-language management. Manages language resources. Makes it easy to switch between different language sources.",
   "author": "azmisahin@outlook.com",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node.git"
-  },
   "keywords": [
     "flexible",
     "multi-language",
     "managament",
-    "resource"
+    "resource",
+    "translate",
+    "js",
+    "json",
+    "xml",
+    "csv"
   ],
+  "homepage": "https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node.git"
+  },
   "bugs": {
     "url": "https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node/issues"
   },
-  "homepage": "https://github.com/azmisahin/azmisahin-software-web-component-language-manager-node#readme",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint src && eslint tests",
+    "lint": "eslint src --fix && eslint tests --fix",
     "test": "node tests"
   },
   "husky": {

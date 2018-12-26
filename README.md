@@ -11,12 +11,46 @@ $ npm i --save language-manager
 # Usage
 
 ```js
-// Load the full build
+/// Language Manager Reference
 var LanguageManager = require('language-manager')
 
-// Instance create
+/// Test object
 var l = new LanguageManager()
+  // Resource Type format
+  .setType(LanguageManager.ResourceType.Json)
+  // Resource file folder
+  .setPath('tests/resource')
+  // Resource language code
+  .setLang('en-us')
+
+/// Expected test result
+var expected = 'Language Manager'
+/// Actual test result
+var actual = l
+  // Get resource item value string
+  .Val('app.name')
+
+// Test output
+console.log(`${l.Lang} : ${actual}`)
 ```
+> en-us : Language Manager
+
+```js
+/// Change language
+l.setLang('tr-tr')
+
+/// Expected test result
+expected = 'Dil Yöneticisi'
+/// Actual test result
+actual = l
+  // Get resource item value string
+  .Val('app.name')
+
+// Test output
+console.log(`${l.Lang} : ${actual}`)
+```
+> tr-tr : Dil Yöneticisi
+
 
 # Test
 
