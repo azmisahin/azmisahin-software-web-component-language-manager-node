@@ -1,6 +1,3 @@
-/// File Stream Reference
-var fs = require('fs')
-
 /**
  * File Manager
  *
@@ -55,8 +52,11 @@ FileManager.prototype.setFile = function(path){
  */
 FileManager.prototype.GetString = function(){
 
-  /// Read file in synchronously (blocking)
-  var result = fs.readFileSync(this.File, 'utf8')
+  /// Default require
+  var result= require('../../' + this.File)
+
+  /// Only string result
+  result = JSON.stringify(result)
 
   /// result file content
   return result
