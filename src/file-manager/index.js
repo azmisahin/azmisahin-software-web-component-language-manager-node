@@ -52,8 +52,17 @@ FileManager.prototype.setFile = function(path){
  */
 FileManager.prototype.GetString = function(){
 
-  /// Default require
-  var result= require('../../' + this.File)
+  /// Require path module
+  var path = require('path')
+  
+  /// Root application
+  this.BaseDir = process.cwd()
+  
+  /// Resource Path
+  this.ResourcePath = path.join(this.BaseDir, this.File)
+
+  /// Require
+  var result = require(this.ResourcePath)
 
   /// Only string result
   result = JSON.stringify(result)

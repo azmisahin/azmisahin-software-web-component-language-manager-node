@@ -7,6 +7,62 @@ The most flexible version of multi-language management. Manages language resourc
 $ npm i -g npm
 $ npm i --save language-manager
 ```
+# Add Resource
+
+Place the file containing the source language definitions in a folder. For example, "tests/resource".
+
+```shell
+example.com/                # → Root folder for the project
+└── tests/                  # → Tests folder
+    └── resource/           # → Resource Folder       .setPath('tests/resource') 
+        └── json/           # → Resource Type Folder  .setType(LanguageManager.ResourceType.Json)
+            ├── en-us.json  # → Resource              language.extention English United States
+            └── tr-tr.json  # → Resource              language.extention Turkish Turkey
+```
+
+## Sample Resource File
+
+en-us.json
+
+```json
+{
+  "root": {
+    "data": [
+      {
+        "type": "string",
+        "name": "app.name",
+        "value": "Language Manager"
+      },
+      {
+        "type": "string",
+        "name": "words.ok",
+        "value": "Okay"
+      }
+    ]
+  }
+}
+```
+
+tr-tr.json
+
+```json
+{
+  "root": {
+    "data": [
+      {
+        "type": "string",
+        "name": "app.name",
+        "value": "Dil Yöneticisi"
+      },
+      {
+        "type": "string",
+        "name": "words.ok",
+        "value": "Tamam"
+      }
+    ]
+  }
+}
+```
 
 # Usage
 
