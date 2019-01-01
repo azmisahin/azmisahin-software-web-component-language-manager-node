@@ -54,18 +54,18 @@ FileManager.prototype.GetString = function(){
 
   /// Require path module
   var path = require('path')
-  
+
   /// Root application
   this.BaseDir = process.cwd()
-  
+
   /// Resource Path
   this.ResourcePath = path.join(this.BaseDir, this.File)
 
   /// Require
-  var result = require(this.ResourcePath)
+  this.FileString = require(`${this.ResourcePath}`)
 
   /// Only string result
-  result = JSON.stringify(result)
+  var result = JSON.stringify(this.FileString)
 
   /// result file content
   return result
