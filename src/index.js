@@ -4,11 +4,8 @@ var Data = require('./data')
 /// Data Resource Model Reference
 var Resource = require('./data/resource')
 
-/// Parser Manager Reference
-var Parser = require('./parse-manager')
-
-/// File Manager Reference
-var FileManger = require('./file-manager')
+/// File Management Reference
+var FileManagement = require('file-management-simple')
 
 /**
  * Language Manager
@@ -47,6 +44,9 @@ class LanguageManager {
 
     /// Name property
     this.Name = 'language-manager'
+
+    /// File Management
+    this.FileManagement = new FileManagement()
 
     /// result LanguageManager instance
     return this
@@ -128,50 +128,32 @@ LanguageManager.prototype.List = function () {
   /// All resource data
   this.Resources = new Data()
 
-  // File Manager instance
-  var fileManager = new FileManger()
-
-  // string data
-  var fileString = ''
-
-  // Parser instance
-  var parser = new Parser()
-
   /// Resource file type
   switch (this.Type) {
+
   /// Resource Type `json`
   case LanguageManager.ResourceType.Json:
 
-    // Get STRING from file
-    fileString = fileManager
+    // Define File Information
+    this.FileInfo = this.FileManagement
       .setFile(this.FullPath())
-      .GetString()
+      .File
 
-    // Parser instance
-    parser = new Parser()
-
-    // Get JSON object from string
-    this.Resources = parser
-      .setString(fileString)
-      .GetJson()
+    // Resource json
+    this.Resources = this.FileInfo.ToJson()
 
     break
 
   /// Resource Type Undefine
   default:
 
-    // Get STRING from file
-    fileString = fileManager
+    // Define File
+    this.FileInfo = this.FileManagement
       .setFile(this.FullPath())
-      .GetString()
+      .File
 
-    // Parser instance
-    parser = new Parser()
-
-    // Get JSON object from string
-    this.Resources = parser
-      .setString(fileString)
-      .GetJson()
+    // Resource Json Default
+    this.Resources = this.FileInfo.ToJson()
 
     break
   }

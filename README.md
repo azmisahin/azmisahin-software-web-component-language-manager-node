@@ -1,20 +1,26 @@
 # language-manager
+
 The most flexible version of multi-language management. Manages language resources. Makes it easy to switch between different language sources.
 
-# Install
+## Install
+
+You must first set up nodejs from https://nodejs.org
 
 ```shell
 $ npm i -g npm
+▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
 $ npm i --save language-manager
+▀ ╢█████████████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░╟
 ```
-# Add Resource
+
+## Add Resource
 
 Place the file containing the source language definitions in a folder. For example, "tests/resource".
 
 ```shell
 example.com/                # → Root folder for the project
 └── tests/                  # → Tests folder
-    └── resource/           # → Resource Folder       .setPath('tests/resource') 
+    └── resource/           # → Resource Folder       .setPath('tests/resource')
         └── json/           # → Resource Type Folder  .setType(LanguageManager.ResourceType.Json)
             ├── en-us.json  # → Resource              language.extention English United States
             └── tr-tr.json  # → Resource              language.extention Turkish Turkey
@@ -64,7 +70,9 @@ tr-tr.json
 }
 ```
 
-# Usage
+## Usage
+
+> main.js
 
 ```js
 /// Language Manager Reference
@@ -89,9 +97,24 @@ var actual = l
 // Test output
 console.log(`${l.Lang} : ${actual}`)
 ```
+
+## Try
+
+```shell
+
+$ node main
+
+```
+
 > en-us : Language Manager
 
+Change Language
+
 ```js
+.
+..
+...
+
 /// Change language
 l.setLang('tr-tr')
 
@@ -105,16 +128,37 @@ actual = l
 // Test output
 console.log(`${l.Lang} : ${actual}`)
 ```
+
 > tr-tr : Dil Yöneticisi
 
-
-# Test
+## Test
 
 ```shell
 $ npm run test
+
+> node tests
+
+Simple Test Tool
+==================================================
+Is the instance initialized?
+Success
+--------------------------------------------------
+Get resource item with name. Simple Zero Configure?
+Success
+--------------------------------------------------
+Get resource item with name. Zero Configure?
+Success
+--------------------------------------------------
+Get resource item with name. Full Configure?
+Success
+--------------------------------------------------
+Get resource item with name. Full Configure TR?
+Success
+--------------------------------------------------
 ```
 
-# Pipelines
+## Pipelines
+
 [![Build Status](https://dev.azure.com/azmisahin-github/azmisahin-software-web-component-language-manager-node/_apis/build/status/azmisahin.azmisahin-software-web-component-language-manager-node?branchName=master)](https://dev.azure.com/azmisahin-github/azmisahin-software-web-component-language-manager-node/_build/latest?definitionId=8?branchName=master)
 
 [![NPM](https://nodei.co/npm/language-manager.png)](https://nodei.co/npm/language-manager/)

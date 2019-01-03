@@ -47,5 +47,8 @@
     "husky": "*",
     "lint-staged": "*",
     "test-management": "*"
+  },
+  "dependencies": {
+    "file-management-simple": "*"
   }
 }
